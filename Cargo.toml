@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "src/isen_mulang_rust_backend"
+]
+
+resolver = "2"

@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "isen_mulang_rust_backend": {
+      "candid": "src/isen_mulang_rust_backend/isen_mulang_rust_backend.did",
+      "package": "isen_mulang_rust_backend",
+      "type": "rust"
+    },
+    "isen_mulang_rust_frontend": {
+      "dependencies": [
+        "isen_mulang_rust_backend"
+      ],
+      "source": [
+        "src/isen_mulang_rust_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "isen_mulang_rust_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,0 +1,24 @@
+type Update = record {
+  status : text;
+  details : text;
+  timestamp : nat64;
+  updated_by : principal;
+};
+
+type CoffeeLot = record {
+  id : nat64;
+  farmer : text;
+  harvest_date : text;
+  location : text;
+  status : text;
+  updates : vec Update;
+  timestamp : nat64;
+};
+
+service : {
+  "add_lot" : (farmer: text, harvest_date: text, location: text) -> (opt nat64);
+  "get_all_lots" : () -> (vec CoffeeLot) query;
+  "get_lot" : (nat64) -> (opt CoffeeLot) query;
+  "register_user" : () -> (bool);
+  "update_lot" : (nat64, text, text) -> (opt text);
+}
